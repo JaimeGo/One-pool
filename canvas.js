@@ -3,7 +3,7 @@
 function Canvas2D() {
     this._canvas = document.getElementById("screen");
     this._canvasContext = this._canvas.getContext('2d');
-    this._canvasOffset = Vector2.zero;
+    
 }
 
 Canvas2D.prototype.clear = function () {
@@ -11,15 +11,17 @@ Canvas2D.prototype.clear = function () {
 };
 
 
-Canvas2D.prototype.drawImage = function (image, position, rotation, scale, origin) {
+Canvas2D.prototype.drawImage = function (image, position) {
 
-    this._canvasContext.drawImage(image, 0, 0,
-        sprite.width, sprite.height,
-        -origin.x * scale, -origin.y * scale,
-        sprite.width * scale, sprite.height * scale);
+    this._canvasContext.drawImage(image, position.x,position.y)
 };
 
 let Canvas=new Canvas2D()
 
 let image=new Image()
-image.src="./assets/sprites/spr_backgound.png"
+image.src="./assets/sprites/spr_background5.png"
+
+
+setTimeout(()=>{
+	Canvas.drawImage(image,{x:0,y:0})
+},1000)
