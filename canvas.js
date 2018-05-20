@@ -11,17 +11,23 @@ Canvas2D.prototype.clear = function () {
 };
 
 
-Canvas2D.prototype.drawImage = function (image, position, origin, rotation=0) {
+Canvas2D.prototype.drawImage = function (image, position, origin, rotation=0, resize=null) {
 	if (!position){
 		position =new Vector2()
 	}
 	if (!origin){
 		origin=new Vector2()
 	}
+
 	this._canvasContext.save()
 	this._canvasContext.translate(position.x,position.y)
 	this._canvasContext.rotate(rotation)
-	this._canvasContext.drawImage(image, -origin.x,-origin.y);
+	if (resize===null){
+		this._canvasContext.drawImage(image, -origin.x,-origin.y);
+	}
+	else {
+		this._canvasContext.drawImage(image, -origin.x,-origin.y,resize.x,resize.y);
+	}
 	this._canvasContext.restore()
 
 };

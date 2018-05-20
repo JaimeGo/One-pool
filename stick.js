@@ -35,7 +35,7 @@ Stick.prototype.updateRotation=function(){
 }
 
 Stick.prototype.increasePower=function(){
-	this.power+=100
+	this.power+=1
 	this.origin.x+=5
 }
 
