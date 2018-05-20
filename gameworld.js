@@ -1,7 +1,8 @@
 function GameWorld(){
-	this.stick=new Stick(new Vector2(413,413))
 	this.whiteball=new Ball(new Vector2(413,413))
+	this.stick=new Stick(new Vector2(413,413), this.whiteball.shoot)
 	
+
 }
 
 
