@@ -1,6 +1,7 @@
+const DELTA=1/100
 function GameWorld(){
 	this.whiteball=new Ball(new Vector2(413,413))
-	this.stick=new Stick(new Vector2(413,413), this.whiteball.shoot)
+	this.stick=new Stick(new Vector2(413,413), this.whiteball.shoot.bind(this.whiteball))
 	
 
 }
