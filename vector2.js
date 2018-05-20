@@ -8,8 +8,6 @@ Vector2.prototype.copy=function(){
 }
 
 Vector2.prototype.addTo=function(vector){
-	console.log("ADDTOVECTOR",vector.x, vector.y)
-	console.log("ADDTOTHIS",this.x,this.y)
 	return new Vector2(this.x+vector.x, this.y+vector.y)
 }
 Vector2.prototype.mult=function(scalar){

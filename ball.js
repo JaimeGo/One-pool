@@ -31,7 +31,7 @@ Ball.prototype.update=function(delta, stick){
 	for (let point of blackPoints){
 
 		if(Math.abs(this.position.x-point[0]) <10 && Math.abs(this.position.y-point[1])<10){
-			console.log("POINT",point)
+			
 		this.position.x=350
 		this.position.y=330
 		this.velocity.x=0
