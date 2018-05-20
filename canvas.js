@@ -11,9 +11,18 @@ Canvas2D.prototype.clear = function () {
 };
 
 
-Canvas2D.prototype.drawImage = function (image, position) {
+Canvas2D.prototype.drawImage = function (image, position, origin) {
+	if (!position){
+		position =new Vector2()
+	}
+	if (!origin){
+		origin=new Vector2()
+	}
+	this._canvasContext.save()
+	this._canvasContext.translate(position.x,position.y)
+	this._canvasContext.drawImage(image, -origin.x,-origin.y);
+	this._canvasContext.restore()
 
-	this._canvasContext.drawImage(image, position.x,position.y);
 };
 
 let Canvas=new Canvas2D();
