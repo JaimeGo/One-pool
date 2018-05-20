@@ -20,6 +20,8 @@ Stick.prototype.update=function(){
 		this.shoot()
 	}
 	this.updateRotation()
+	
+	
 
 }
 
@@ -39,10 +41,11 @@ Stick.prototype.increasePower=function(){
 	this.origin.x+=5
 }
 
-Stick.prototype.shoot=function(){
+Stick.prototype.shoot=function(ball){
 	this.onShoot(this.power,this.rotation)
 	this.power=0
 	this.origin=STICK_SHOT_ORIGIN.copy()
+
 }
 
 

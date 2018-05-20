@@ -1,7 +1,7 @@
 const DELTA=0.98
 function GameWorld(){
-	this.whiteball=new Ball(new Vector2(413,413))
-	this.stick=new Stick(new Vector2(413,413), this.whiteball.shoot.bind(this.whiteball))
+	this.whiteball=new Ball(new Vector2(350,330))
+	this.stick=new Stick(new Vector2(350,330), this.whiteball.shoot.bind(this.whiteball))
 	
 
 }
@@ -9,7 +9,7 @@ function GameWorld(){
 
 GameWorld.prototype.update=function(){
 	this.stick.update()
-	this.whiteball.update(DELTA)
+	this.whiteball.update(DELTA,this.stick)
 }
 
 GameWorld.prototype.draw=function(){
