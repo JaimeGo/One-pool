@@ -9,3 +9,7 @@ It uses only one ball, as most of the structure of the game is developed at this
 It was fun!
 
 Play eight-pool in Heroku: https://eight-pool-jaimego.herokuapp.com/
+
+![](screenshot1.png)
+
+![](screenshot2.png)
