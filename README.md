@@ -1,4 +1,4 @@
-# eight-pool
+# One-pool
 
 Pool game created in Javascript and Html5, for educational purposes. Based on this video: https://www.youtube.com/watch?v=aXwCrtAo4Wc
 
@@ -8,7 +8,7 @@ It uses only one ball, as most of the structure of the game is developed at this
 
 It was fun!
 
-Play eight-pool in Heroku: https://eight-pool-jaimego.herokuapp.com/
+Play one-pool in Heroku: https://one-pool-jaimego.herokuapp.com/
 
 ![](screenshot1.png)
 
